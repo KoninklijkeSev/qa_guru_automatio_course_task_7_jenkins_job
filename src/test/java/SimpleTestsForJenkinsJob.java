@@ -13,6 +13,11 @@ public class SimpleTestsForJenkinsJob {
 //        assertTrue(true);
     }
 
+    @Test
+    @Tag("negative")
+    void negativeTest() {
+        assertEquals(true, false);
+    }
 
     @Test
     @Tag("positive")
@@ -20,4 +25,9 @@ public class SimpleTestsForJenkinsJob {
         assertThat(true, is(true));
     }
 
-
+    @Test
+    @Tag("negative")
+    void negativeWithHamcrestTest() {
+        assertThat(true, is(false));
+    }
+    }
