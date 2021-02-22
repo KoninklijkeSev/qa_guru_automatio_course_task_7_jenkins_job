@@ -13,18 +13,11 @@ public class SimpleTestsForJenkinsJob {
 //        assertTrue(true);
     }
 
-    @Test
-    void negativeTest() {
-        assertEquals(true, false);
-    }
+
     @Test
     @Tag("positive")
     void successWithHamcrestTest() {
         assertThat(true, is(true));
     }
 
-    @Test
-    void negativeWithHamcrestTest() {
-        assertThat(true, is(false));
-    }
-    }
+
